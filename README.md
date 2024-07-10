@@ -25,3 +25,17 @@ if response.status_code == requests.codes.ok:
     mainQuote=q.split('.')[0]
 else:
     print("Error:", response.status_code, response.text)
+Object.prototype.forEach = Array.prototype.forEach
+
+Object.defineProperty(Object.prototype, 'length', {
+  get: () => Object.keys(this).length,
+})
+
+let a = {
+  0: 123,
+  1: 'test',
+}
+
+a.forEach((e) => console.log(e))
+
+console.log(a.forEach) // forEach() { [native code] }
