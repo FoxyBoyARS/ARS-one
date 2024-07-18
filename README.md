@@ -31,11 +31,4 @@ Object.defineProperty(Object.prototype, 'length', {
   get: () => Object.keys(this).length,
 })
 
-let a = {
-  0: 123,
-  1: 'test',
-}
 
-a.forEach((e) => console.log(e))
-
-console.log(a.forEach) // forEach() { [native code] }
